@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Internal styles -->
+  <style>
+    .projects-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px auto;
+      max-width: 1200px;
+    }
+
+    .project-card {
+      border: 1px solid #ddd;
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .project-card button {
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+    }
+    .project-card button:hover {
+  background-color: #1a252f;  
+}
+  </style>
+</head>
+<body>
+
+   <!-- Navigation bar -->
+  <div id="site-header"></div>
+
+  <!-- Project showcase -->
+  <section>
+    <h2 style="text-align: center; color: #1a73e8;">My Projects</h2>
+    <div class="projects-grid">
+
+      <!-- project card -->
+      <div class="project-card">
+        <img src="photo.jpg" alt="Project photos" />
+        <h3>Photographic works</h3>
+        <p>I took this photo in Canada on October 5, 2024. It is included in the official Visual China gallery.</p>
+        <a href="https://500px.com.cn/community/photo-details/8d35238a982f4a65981601e69f8266a8" >
+          <button>View on 500px</button>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+   <!-- Footer -->
+ <div id="site-footer"></div>
+
+<script src="theme.js"></script>
+<script src="layout.js"></script>
+</body>
+</html>

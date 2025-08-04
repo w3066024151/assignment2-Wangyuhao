@@ -1,0 +1,81 @@
+* ===== General Settings ===== */
+* {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+  line-height: 2;
+  padding: 20px;
+}
+
+/* ===== Navigation bar styles ===== */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  padding: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 10px 15px;
+
+}
+
+nav ul li a:hover {
+  background-color: #888888;
+}
+
+/* ===== footer style ===== */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  color: gray;
+  font-size: 14px;
+}
+/* ===== Theme (Light default) ===== */
+body {
+  background: #ffffff;
+  color: #222222;
+}
+
+/* ===== Dark Mode (add .dark on <body> or <html>) ===== */
+body.dark {
+  background: #121212;
+  color: #e6e6e6;
+}
+/* ===== Navigation overlay in dark mode  ===== */
+body.dark nav ul {
+  background-color: #1f1f1f;
+}
+body.dark nav ul li a {
+  color: #e6e6e6;
+}
+body.dark nav ul li a:hover {
+  background-color: #333333;
+}
+/* ===== Footer text color in dark mode  ===== */
+body.dark footer {
+  color: #aaaaaa;
+}
+/* ===== The appearance of the theme button  ===== */
+#theme-toggle {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: 1px solid #cccccc;
+  background: #ffffff;
+}
+body.dark #theme-toggle {
+  background: transparent;
+  color: #e6e6e6;
+  border-color: #555555;
+}

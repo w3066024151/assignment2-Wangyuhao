@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Part 1：Light/dark theme switching",
+    "date": "2025-08-04",
+    "content": "Add a button with the id “Dark Mode” at the end of the <ul> in each page navigation.Add body.dark and its related selectors at the end of style.css to override the dark styles of the navigation, footer, and buttons.Create theme.js: find the button using getElementById, bind the click event, use classList.add/remove to toggle the dark class on the <body> element, and update the button text."
+  },
+  {
+    "title": "Part 2：Dynamically Loading Blogs",
+    "date": "2025-08-04",
+    "content": "Create a posts.json file to save the data of the article array. Add <div></div> as a container in blog.html and import blog.js at the bottom. In blog.js, use fetch('posts.json') to obtain data, call response.json() to parse, and then use forEach to traverse the article array. Create <h3>, <small>, <p> and append them to the #blog-list container."
+  }
+]
