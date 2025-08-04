@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-  var parts = window.location.pathname.split('/').filter(Boolean); 
-  var base = parts.length > 0 ? '/' + parts[0] + '/' : '/';       
-
   var headerSlot = document.getElementById('site-header');
   var footerSlot = document.getElementById('site-footer');
 
   function fetchText(path) {
-    return fetch(base + path).then(function (res) { return res.text(); });
+    return fetch(path).then(function (res) { return res.text(); });
   }
 
+  // Insert header
   if (headerSlot) {
     fetchText('header.html')
       .then(function (html) {
         headerSlot.innerHTML = html;
+
+        // Bind theme toggle after header is inserted
         var btn = document.getElementById('theme-toggle');
         if (btn) {
           btn.addEventListener('click', function () {
@@ -29,12 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
       })
-      .catch(function (e) { console.error('Load header failed:', e); });
+      .catch(function (e) {
+        console.error('Load header failed:', e);
+      });
   }
 
+  // Insert footer
   if (footerSlot) {
     fetchText('footer.html')
-      .then(function (html) { footerSlot.innerHTML = html; })
-      .catch(function (e) { console.error('Load footer failed:', e); });
+      .then(function (html) {
+        footerSlot.innerHTML = html;
+      })
+      .catch(function (e) {
+        console.error('Load footer failed:', e);
+      });
   }
 });
